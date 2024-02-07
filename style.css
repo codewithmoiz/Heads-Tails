@@ -125,7 +125,7 @@ html,body {
     border-radius: 6px;
 }
 
-@keyframes flipCoinAnimation {
+/* @keyframes flipCoinAnimation {
     0% {
         transform: rotateY(0deg);
     }
@@ -135,7 +135,7 @@ html,body {
     100% {
         transform: rotateY(180deg);
     }
-}
+} */
 
 @media (width <= 600px) {
     .coin{

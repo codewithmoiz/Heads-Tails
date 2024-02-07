@@ -20,28 +20,22 @@ function flipCoin(player) {
     var coinText = coin.innerText.toUpperCase();
     var result;
 
-    // Array to store the possible results
     var resultsArray = ['HEADS', 'TAILS', 'HEADS', 'TAILS'];
 
-    // Get a random index to select a result from the array
     var randomIndex = Math.floor(Math.random() * resultsArray.length);
     
-    // Select the result based on the random index
-    // Select the result based on the random index
 result = resultsArray[randomIndex];
 
-// Update the innerText of the coin to reflect the result
 coin.innerText = result;
 
 gsap.to(coin, {
-    rotationY: '+=720', // Rotate the coin 720 degrees for two complete flips
+    rotationY: '+=720',
     scale: 2,
-    duration: 2, // Increase duration to allow complete flipping
+    duration: 2, 
     ease: 'power3.easeInOut',
     onComplete: function() {
-        // Set the final rotation angle based on the result
         gsap.set(coin, {
-            rotationY: 0, // Set rotation to 0 degrees for HEADS and 180 degrees for TAILS
+            rotationY: 0,
             scale: 1,
         });
 
